@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zaika - Restaurant</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+      <a class="navbar-brand" href="#">Zaika</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item"><a class="nav-link" href="#hero">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#menu">Menu</a></li>
+          <li class="nav-item"><a class="nav-link" href="#testimonials">Testimonials</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="hero">
+    <div class="container">
+      <h1>Welcome to Zaika</h1>
+      <p class="lead">Delicious food, delightful experience</p>
+      <a href="#menu" class="btn btn-warning btn-lg mt-3">View Menu</a>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="py-5 bg-light">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2>About Us</h2>
+        <p>Get to know our story and values</p>
+      </div>
+      <div class="row">
+        <div class="col-md-8 mx-auto">
+          <p>AllFood is a vegetarian restaurant dedicated to bringing you the best and freshest ingredients with authentic flavors. Established in 2020, we have been serving customers with love, passion, and a promise of quality. Whether you're craving classic Indian dishes or innovative plant-based creations, AllFood has something special for every palate.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Menu Section -->
+  <section id="menu" class="py-5">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="text-dark">Our Menu</h2>
+        <p>Explore our delicious offerings</p>
+      </div>
+      <div class="row" id="menu-items">
+        <!-- Menu items will be dynamically inserted here -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Bill Section -->
+  <section id="bill-section" class="container my-5">
+    <h4>Order Summary</h4>
+    <div id="bill-items"></div>
+    <hr>
+    <h5>Total: ₹<span id="total-amount">0</span></h5>
+    <button id="clear-bill" class="btn btn-danger mt-3">Clear Bill</button>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section id="testimonials" class="py-5 bg-light">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2>Testimonials</h2>
+        <p>What our customers say</p>
+      </div>
+      <div id="testimonialCarousel" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <blockquote class="blockquote text-center">
+              <p class="mb-0">“Amazing food and friendly staff!”</p>
+              <footer class="blockquote-footer">Amit Sharma</footer>
+            </blockquote>
+          </div>
+          <div class="carousel-item">
+            <blockquote class="blockquote text-center">
+              <p class="mb-0">“The best pizza I've ever had!”</p>
+              <footer class="blockquote-footer">Riya Mehta</footer>
+            </blockquote>
+          </div>
+        </div>
+        <a class="carousel-control-prev" href="#testimonialCarousel" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+        </a>
+        <a class="carousel-control-next" href="#testimonialCarousel" role="button" data-slide="next">
+          <span class="carousel-control-next-icon"></span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-5">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2>Contact Us</h2>
+        <p>We'd love to hear from you</p>
+      </div>
+      <div class="row">
+        <div class="col-md-6 mx-auto">
+          <form>
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="Your Name">
+            </div>
+            <div class="form-group">
+              <input type="email" class="form-control" placeholder="Your Email">
+            </div>
+            <div class="form-group">
+              <textarea class="form-control" rows="4" placeholder="Your Message"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">Send Message</button>
+          </form>
+          <div class="mt-4">
+            <h5>Visit Us</h5>
+            <p>
+              🌱 AllFood Pure Vegetarian Restaurant<br>
+              📍 21 Green Market Street, Indore, Madhya Pradesh, India - 452001<br>
+              ☎️ <a href="tel:+919998877766">+91 99988 77766</a><br>
+              ✉️ <a href="mailto:support@allfoodveg.in">support@allfoodveg.in</a>
+            </p>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>&copy; <span id="autodate"></span> AllFood. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>
